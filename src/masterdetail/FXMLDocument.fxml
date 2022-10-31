@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="masterdetail.FXMLDocumentController">
+   <children>
+      <Label layoutX="11.0" layoutY="38.0" text="No Faktur" />
+      <Label layoutX="221.0" layoutY="38.0" text="Tanggal" />
+      <Label layoutX="391.0" layoutY="38.0" text="Kode Lgn" />
+      <Label layoutX="11.0" layoutY="89.0" text="Kode Brg" />
+      <Label layoutX="11.0" layoutY="130.0" text="Jumlah" />
+      <TextField fx:id="txtnofaktur" layoutX="67.0" layoutY="34.0" onKeyPressed="#nofakturcek" />
+      <TextField fx:id="txtkodelgn" layoutX="443.0" layoutY="34.0" />
+      <TextField fx:id="txtkodebrg" layoutX="67.0" layoutY="85.0" />
+      <TextField fx:id="txtjumlah" layoutX="67.0" layoutY="126.0" />
+      <DatePicker fx:id="dpttanggal" layoutX="269.0" layoutY="34.0" prefHeight="25.0" prefWidth="117.0" />
+      <Button fx:id="btntambah" layoutX="34.0" layoutY="200.0" mnemonicParsing="false" onAction="#tambahklik" text="Tambah" />
+      <Button fx:id="btnhapus" layoutX="100.0" layoutY="200.0" mnemonicParsing="false" onAction="#hapusklik" text="Hapus" />
+      <Button fx:id="btnclear" layoutX="158.0" layoutY="200.0" mnemonicParsing="false" onAction="#clearklik" text="Clear" />
+      <Button fx:id="btnsimpan" layoutX="32.0" layoutY="350.0" mnemonicParsing="false" onAction="#simpanklik" text="Simpan" />
+      <Button fx:id="btnbatal" layoutX="93.0" layoutY="350.0" mnemonicParsing="false" onAction="#batalklik" text="Batal" />
+      <Button fx:id="brnkeluar" layoutX="141.0" layoutY="350.0" mnemonicParsing="false" onAction="#keluarklik" text="Keluar" />
+      <TableView fx:id="tbvdetil" layoutX="225.0" layoutY="85.0" onMouseClicked="#tbvdetillklik" prefHeight="295.0" prefWidth="367.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
